@@ -179,7 +179,14 @@ $(document).ready(function ()
 	 */
     window.expandOrReduce = function(pkgID)
     {
-        $("#" + pkgID + " .secondary-info").slideToggle();
+        if ($("#" + pkgID + " .secondary-info").hasClass("hidden"))
+        {
+            $("#" + pkgID + " .secondary-info").addClass("animated bounceInDown").removeClass("hidden");
+        }
+        else
+        {
+            $("#" + pkgID + " .secondary-info").addClass("animated bounceOutUp");
+        }
     };
     
     $("nav>ol>li>a").click( function()

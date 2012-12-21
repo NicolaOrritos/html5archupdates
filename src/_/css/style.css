@@ -132,7 +132,7 @@ button {width: auto; overflow: visible;}
 /* we like off-black for text */
 body, select, input, textarea {color: #333;}
 
-a {color: #2266AA;}
+a {color: #26A;}
 a:hover {color: #69f;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
@@ -266,19 +266,14 @@ nav .selected {
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 .package .secondary-info {
-	border-top: #26A solid 1px;
-	
-	margin-bottom: 1%;
+    border-top: #26A solid 1px;
 	
 	padding-left: 6px;
 	padding-right: 8px;
-	
-	padding-top: 4px;
-	padding-bottom: 6px;
 	
 	color: #DDDDDD;
 	background-color: #787878;
@@ -286,6 +281,11 @@ nav .selected {
 	font-size: 14pt;
 	
 	text-shadow: 0px 1px 3px #383838;
+    
+    margin-bottom: 1%;
+	
+	padding-top: 4px;
+	padding-bottom: 6px;
 }
 
 .package .secondary-info .package-arch {
