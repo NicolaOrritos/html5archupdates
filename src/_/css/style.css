@@ -291,7 +291,6 @@ nav .selected {
 .package .secondary-info .description {
     display: inline-block;
 
-    width: 320px;
     max-width: 440px;
     
     overflow: hidden;
@@ -301,6 +300,8 @@ nav .selected {
 
 .package .secondary-info .package-arch {
     display: inline;
+    
+    margin-left: 8px;
 }
 
 .package .secondary-info .link {
