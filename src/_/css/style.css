@@ -157,8 +157,7 @@ html {
 body {
     font-family: 'Open Sans Condensed', sans-serif;
     
-    background-image: url('../img/paperstripes.png');
-    background-repeat: repeat-x repeat-y space;
+    background-color: #444;
     
     margin-left: 4px;
     margin-right: 4px;
@@ -166,8 +165,11 @@ body {
 
 h1 {
     font-size: 24pt;
-    
-    text-shadow: 1px 1px 2px #86A2FF;
+}
+
+h1>a {
+    color: #6AC;
+    text-shadow: 1px 2px 3px #012;
 }
 
 a {
@@ -190,8 +192,11 @@ nav>ol>li {
 	float: left;
 	
 	padding: 4px;
-	
-	text-shadow: 1px 1px 2px #86A2FF;
+}
+
+nav>ol>li>a {
+    color: #6BF;
+    text-shadow: 1px 2px 3px #012;
 }
 
 nav .selected {
@@ -200,7 +205,6 @@ nav .selected {
 
 #packages-list {
 	display: block;
-	float: left;
 	clear: left;
 	
 	width: 100%;
@@ -209,60 +213,58 @@ nav .selected {
 }
 
 #packages-list .package {
+    overflow: hidden;
+    
+    margin-top: 4px;
+	margin-bottom: 6px;
+	
 	width: 100%;
 	
-	margin-top: 4px;
-	margin-bottom: 6px;
+	color: #8AD;
+	background-color: #555;
+	
+	text-shadow: 0px 2px 2px #383838;
+	
+	text-overflow: ellipsis;
+}
+
+.package .pub-date {
+    display: inline;
+    float: right;
+    clear: right;
+    
+	font-size: 14pt;
+	text-shadow: 0px 1px 2px #383838;
+	
+	margin-right: 6px;
 }
 
 .package .main-info {
-	background-color: #606060;
-	
+    display: inline-block;
+    overflow: hidden;
+
 	padding-left: 6px;
-	padding-right: 8px;
-	
-	padding-top: 8px;
-	padding-bottom: 6px;
 }
 
 .package .main-info .package-name {
 	display: inline;
-	float: none;
-	
-	color: #CCCCCC;
 	
 	text-overflow: ellipsis;
-	
-	text-shadow: 0px 2px 3px #383838;
 }
 
 .package .main-info .package-version {
-	display: inline;
-	float: none;
-	
-	color: #CCCCCC;
-	
-	text-overflow: ellipsis;
+    display: inline;
 	
 	font-size: 14pt;
-	
 	text-shadow: 0px 1px 2px #383838;
 	
-	margin-left: 0.6%;
+	margin-left: 6px;
 }
 
-.package .main-info .expand {
-	display: inline;
-	float: right;
-	clear: right;
-	
-	padding-left: 12px;
-	padding-right: 12px;
-	
-	color: #A2A2A2;
-	font-weight: bold;
-	
-	text-shadow: 0px 2px 4px #464646;
+.package .secondary-info-container {
+    display: inline-block;
+    
+    white-space: nowrap;
 }
 
 .hidden {
@@ -270,36 +272,41 @@ nav .selected {
 }
 
 .package .secondary-info {
-    border-top: #26A solid 1px;
+}
+
+.package .secondary-info .handle-left {
+    border-left: #269 solid 2px;
 	
-	padding-left: 6px;
+	padding-left: 8px;
+	margin-left: 18px;
+}
+
+.package .secondary-info .handle-right {
+    border-right: #269 solid 2px;
+	
 	padding-right: 8px;
-	
-	color: #DDDDDD;
-	background-color: #787878;
-	
-	font-size: 14pt;
-	
-	text-shadow: 0px 1px 3px #383838;
+	margin-right: 12px;
+}
+
+.package .secondary-info .description {
+    display: inline-block;
+
+    width: 320px;
+    max-width: 440px;
     
-    margin-bottom: 1%;
-	
-	padding-top: 4px;
-	padding-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .package .secondary-info .package-arch {
     display: inline;
-    float: right;
-    clear: left;
-    
-    color: #CCCCCC;
-    
-    font-size: 12pt;
 }
 
 .package .secondary-info .link {
-	color: #CCCCDD;
+    display: inline;
+    
+    color: #8AD;
 }
 
 footer {

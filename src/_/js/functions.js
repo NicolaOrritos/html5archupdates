@@ -85,20 +85,21 @@ $(document).ready(function ()
         var pkgArchitecture = getPackageArchitecture(entry.title);
         var pkgDate = getPackagePubDate(entry.publishedDate);
         
-        result += "<div id='" + pkgID + "' class='package'>";
-        result += "    <div class='main-info' onClick=\"expandOrReduce('" + pkgID + "')\">";
+        result += "<div id='" + pkgID + "' class='package' onClick=\"expandOrReduce('" + pkgID + "')\">";
+        result += "    <div class='main-info'>";
         result += "        <div class='package-name'>" + pkgName + "</div>";
         result += "        <div class='package-version'>" + pkgVersion + "</div>";
-        result += "        <div class='expand'>&gt;</div>";
         result += "    </div>";
         
-        
-        result += "    <div class='secondary-info hidden'>";
-        result += "        <div class='description'>" + entry.contentSnippet + "</div>";
-        result += "        <div class='package-arch'>[" + pkgArchitecture + "]</div>";
-        result += "        <div class='pub-date'>" + pkgDate + "</div>";
-        result += "        <a class='link' href='" + entry.link + "'>go to package page</a>";
+        result += "    <div class='secondary-info-container'>";
+        result += "        <div class='secondary-info hidden'>";
+        result += "            <div class='description handle-left'>" + entry.contentSnippet + "</div>";
+        result += "            <div class='package-arch handle-right'>[" + pkgArchitecture + "]</div>";
+        result += "            <a class='link' href='" + entry.link + "'>&gt;</a>";
+        result += "        </div>";
         result += "    </div>";
+        
+        result += "    <div class='pub-date'>" + pkgDate + "</div>";
         result += "</div>";
         
         return result;
@@ -181,11 +182,17 @@ $(document).ready(function ()
     {
         if ($("#" + pkgID + " .secondary-info").hasClass("hidden"))
         {
-            $("#" + pkgID + " .secondary-info").addClass("animated bounceInDown").removeClass("hidden");
+            $("#" + pkgID + " .secondary-info").removeClass("hidden").addClass("animated fadeInRightBig");
         }
         else
         {
-            $("#" + pkgID + " .secondary-info").addClass("animated bounceOutUp");
+            $("#" + pkgID + " .secondary-info").addClass("animated fadeOutRightBig");
+            
+            setTimeout(function()
+            {
+                $("#" + pkgID + " .secondary-info").addClass("hidden").removeClass("animated fadeInRightBig").removeClass("animated fadeOutRightBig");
+                
+            }, 1000);
         }
     };
     
