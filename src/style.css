@@ -151,20 +151,41 @@ mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: b
 /* APP STYLES */
 /* *************************************************** */
 
-html {
+.hidden {
+    display: none;
 }
 
 body {
     font-family: 'Open Sans Condensed', sans-serif;
     
+    color: #6AC;
     background-color: #444;
     
     margin-left: 4px;
     margin-right: 4px;
 }
 
-h1 {
-    font-size: 24pt;
+header {
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+header img {
+	display: inline;
+	
+	vertical-align: middle;
+	
+	padding-right: 6px;
+	margin-bottom: 10px;
+}
+
+header h1 {
+	display: inline;
+    float: left;
+    
+    width: auto;
+	
+    font-size: 1.65em;
 }
 
 h1>a {
@@ -176,26 +197,88 @@ a {
 	text-decoration: none;
 }
 
-nav>ol {
-	margin-top: 6px;
-	margin-bottom: 2px;
-	
-	margin-right: 4px;
-	
-	width: 100%;
-	
-	font-size: 16pt;
+nav {
+	display: inline-block;
+    float: right;
+    
+    width: auto;
 }
 
-nav>ol>li {
+nav #more-menu {
+    position: absolute;
+    
+    top: 4px;
+    right: 4px;
+    
+    display: block;
+    float: right;
+    
+    margin-top: 4px;
+	margin-right: 4px;
+}
+
+nav #more-menu #button {
+    float: right;    
+    
+    width:  32px;
+    height: 32px;
+    
+    background: #444 url('ic_action_overflow.png') no-repeat;
+    
+    -webkit-box-shadow: 1px 1px 4px 2px #404040;
+       -moz-box-shadow: 1px 1px 4px 2px #404040;
+            box-shadow: 1px 1px 4px 2px #404040;
+}
+
+nav #more-menu #menu {
+    position: relative;
+    float: right;
+    z-index: 99;
+    
+    padding-left: 6px;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    
+    width: 10em;
+    
+    border-left: #269 solid 8px;
+}
+
+.dropdown {
+    font-size: 1.45em;
+	
+	background-color: #484848;
+
+	-webkit-box-shadow: 1px 1px 4px 3px #404040;
+       -moz-box-shadow: 1px 1px 4px 3px #404040;
+            box-shadow: 1px 1px 4px 3px #404040;
+}
+
+nav #menu .menu-section {
+    display: block;
+	float: left;
+	clear: both;
+	
+	width: 90%;
+	
+	padding-right: 2px;
+	
+	text-align: left;
+	
+    margin: 8px 0px 2px 8px;
+    border-bottom: #269 solid 1px;
+}
+
+nav #menu li {
 	display: block;
 	float: left;
+	clear: both;
 	
-	padding: 4px;
+	margin: 2px 0px 2px 10px;
 }
 
-nav>ol>li>a {
-    color: #6BF;
+nav #menu li>a {
+    color: #8AD;
     text-shadow: 1px 2px 3px #012;
 }
 
@@ -209,39 +292,41 @@ nav .selected {
 	
 	width: 100%;
 	
-	font-size: 18pt;
+	padding-top:    2px;
+	padding-bottom: 4px;
 }
 
 #packages-list .package {
     overflow: hidden;
     
-    margin-top: 4px;
-	margin-bottom: 6px;
+    margin-top: 8px;
+	margin-bottom: 10px;
 	
-	width: 100%;
+	height: auto;
+	width: 98%;
+	max-width: 98%;
 	
 	color: #8AD;
 	background-color: #555;
 	
 	text-shadow: 0px 2px 2px #383838;
 	
-	text-overflow: ellipsis;
-}
-
-.package .pub-date {
-    display: inline;
-    float: right;
-    clear: right;
+	font-size: 1.45em;
     
-	font-size: 14pt;
-	text-shadow: 0px 1px 2px #383838;
-	
-	margin-right: 6px;
+    border-left: #269 solid 8px;
+    
+    -webkit-box-shadow: 1px 1px 4px 2px #404040;
+       -moz-box-shadow: 1px 1px 4px 2px #404040;
+            box-shadow: 1px 1px 4px 2px #404040;
 }
 
 .package .main-info {
     display: inline-block;
-    overflow: hidden;
+    
+    float: left;
+    clear: both;
+    
+    width: 100%;
 
 	padding-left: 6px;
 }
@@ -255,59 +340,64 @@ nav .selected {
 .package .main-info .package-version {
     display: inline;
 	
-	font-size: 14pt;
+	font-size: 1em;
 	text-shadow: 0px 1px 2px #383838;
 	
 	margin-left: 6px;
 }
 
-.package .secondary-info-container {
-    display: inline-block;
+.package .main-info .package-arch {
+    float: right;
     
-    white-space: nowrap;
+    text-shadow: 0px 1px 2px #383838;
+    
+    magin-top: 8px;
+    padding-right: 6px;
+    
+    margin-right: 6px;
 }
 
-.hidden {
-    display: none;
+.inline-block {
+	display: inline-block;
 }
 
 .package .secondary-info {
-}
-
-.package .secondary-info .handle-left {
-    border-left: #269 solid 2px;
+	width: 100%;
+	float: left;
 	
-	padding-left: 8px;
-	margin-left: 18px;
-}
-
-.package .secondary-info .handle-right {
-    border-right: #269 solid 2px;
-	
-	padding-right: 8px;
-	margin-right: 12px;
+    clear: both;
+    
+    white-space: wrap;
+    
+    padding-left: 6px;
 }
 
 .package .secondary-info .description {
-    display: inline-block;
-
-    max-width: 440px;
-    
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.package .secondary-info .package-arch {
     display: inline;
+    float: left;
+    clear: both;
     
-    margin-left: 8px;
+    max-width: 100%;
+    
+    overflow: visible;
+    text-overflow: visible;
+    
+    margin-right: 6px;
 }
 
 .package .secondary-info .link {
     display: inline;
+    float: left;
+    clear: both;
     
-    color: #8AD;
+    color: #4AC;
+}
+
+.package .secondary-info .pub-date {
+    display: inline-block;
+    float: right;
+    
+    margin-right: 12px;
 }
 
 footer {

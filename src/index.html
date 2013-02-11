@@ -23,8 +23,8 @@
 	<meta name="google-site-verification" content="">
 	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
 	
-	<meta name="author" content="Nicola Orritod">
-	<meta name="Copyright" content="Copyright Nicola Orritos 2012. All Rights Reserved.">
+	<meta name="author" content="Nicola Orritos">
+	<meta name="Copyright" content="Copyleft Nicola Orritos 2012. 'Date a Cesare ciò che è di Cesare'">
 
 	<!-- Dublin Core Metadata : http://dublincore.org/ -->
 	<meta name="DC.title" content="Arch Linux Packages Updates">
@@ -41,27 +41,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	-->
 
-	<link rel="shortcut icon" href="_/img/favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 	<!-- This is the traditional favicon.
 		 - size: 16x16 or 32x32
 		 - transparency is OK
 		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
 		 
-	<link rel="apple-touch-icon" href="_/img/apple-touch-icon.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- The is the icon for iOS's Web Clip.
 		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
 		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
 		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 		 
 	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'>
 	
-	<!-- CSS: screen, mobile & print are all in the same file -->
-	<link rel="stylesheet" href="_/css/style.css">
-	<link rel="stylesheet" href="_/css/animate.min.css">
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="animate.min.css" />
 	
 	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
-	<script src="_/js/modernizr-1.7.min.js"></script>
+	<script src="modernizr-1.7.min.js"></script>
 
 </head>
 
@@ -70,38 +69,60 @@
 <div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
 	<header>
-		<h1><a href="">Arch Linux Packages Updates</a></h1>
-		<nav>
-			<ol>
-				<li><a id="all" class="repo-choice selected" href="#">All</a></li>
-				<li><a id="core" class="repo-choice not-selected" href="#">Core</a></li>
-				<li><a id="extra" class="repo-choice not-selected" href="#">Extra</a></li>
-				<li><a id="community" class="repo-choice not-selected" href="#">Community</a></li>
-                <li><a id="multilib" class="repo-choice not-selected" href="#">Multilib</a></li>
-				<li><a id="i686" class="arch-choice not-selected" href="#i">i686</a></li>
-				<li><a id="x86_64" class="arch-choice not-selected" href="#">x86_64</a></li>
-				<li><a id="any" class="arch-choice not-selected" href="#">Any</a></li>
-			</ol>
-		</nav>
+	    <hgroup>
+		    
+		    <h1><a href="">
+		      <!-- img src="aup-48x48.png" / -->
+		      Archlinux UPdates
+            </a></h1>
+            
+		    <nav>
+		        <div id="more-menu">
+		            <div id="button"></div>
+		            <ol id="menu" class="hidden dropdown">
+			            <li><a id="all" class="repo-choice selected" href="#">All</a></li>
+			            <div class="menu-section">Standard Repositories</div>
+			            <li><a id="core" class="repo-choice not-selected" href="#">Core</a></li>
+			            <li><a id="extra" class="repo-choice not-selected" href="#">Extra</a></li>
+			            <li><a id="community" class="repo-choice not-selected" href="#">Community</a></li>
+                        <li><a id="multilib" class="repo-choice not-selected" href="#">Multilib</a></li>
+                        <div class="menu-section">Architectures</div>
+			            <li><a id="i686" class="arch-choice not-selected" href="#i">i686</a></li>
+			            <li><a id="x86_64" class="arch-choice not-selected" href="#">x86_64</a></li>
+			            <li><a id="any" class="arch-choice not-selected" href="#">Any</a></li>
+			            <div class="menu-section">Extra News</div>
+			            <li><a id="aur" class="arch-choice not-selected" href="#">AUR</a></li>
+                        <li><a id="news" class="arch-choice not-selected" href="#">News</a></li>
+		            </ol>
+			    </div>
+		    </nav>
+	    </hgroup>
 	</header>
 	
 	<ul id="packages-list">
 	</ul>
 	
 	<footer>
-		<p><small>&copy; Created by Nicola Orritos using <a href="http://html5reset.org">html5reset.org</a></small></p>
+		<p>
+		  with tech by&nbsp;
+		  <a href="http://html5reset.org">html5reset</a> ::
+          <a href="http://daneden.me/animate">animate.css</a> ::
+          <a href="http://jquery.com">jQuery</a> ::
+          <a href="http://incubator.apache.org/callback">Apache Cordova</a> ::
+          <a href="http://www.google.com/webfonts/specimen/Open+Sans+Condensed">Open Sans Condensed</a> ::
+          <a href="http://labs.ft.com">FT Labs</a>
+		</p>
 	</footer>
 
 </div>
 
 <!-- here comes the javascript -->
-
-<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-<script>window.jQuery || document.write("<script src='_/js/jquery-1.5.1.min.js'>\x3C/script>")</script>
+<script src='jquery-1.9.1.js'></script>
+<script src='google.fastbutton.js'></script>
+<script src='jquery.google.fastbutton.js'></script>
 
 <!-- this is where we put our custom functions -->
-<script src="_/js/functions.js"></script>
+<script src="functions.js"></script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
