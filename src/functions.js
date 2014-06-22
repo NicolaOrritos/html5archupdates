@@ -2,7 +2,7 @@
 (function($){})(window.jQuery);
 
 
-/* trigger when page is ready */
+/* Triggers when page is ready */
 $(document).ready(function ()
 {
     /* *********************
@@ -482,6 +482,21 @@ $(document).ready(function ()
     	
     	
     	toggleMenu();
+    });
+
+
+    /* Gestures */
+
+    // Swipe from left to right
+    Hammer(document.body).on('dragright swiperight', function(event)
+    {
+        // TODO
+    });
+
+    // Swipe from right to left
+    Hammer(document.body).on('dragleft swipeleft', function(event)
+    {
+        // TODO
     });
 
 });

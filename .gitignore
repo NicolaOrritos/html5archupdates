@@ -9,3 +9,7 @@
 .settings
 .project
 
+node_modules
+
+src/server.js
+
