@@ -1,0 +1,243 @@
+
+.hidden {
+    display: none;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    
+    color: #6AC;
+    background-color: #444;
+    
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+header {
+	padding-top: 8px;
+	padding-bottom: 10px;
+}
+
+header img {
+	display: inline;
+	
+	vertical-align: middle;
+	
+	padding-right: 6px;
+	margin-bottom: 10px;
+}
+
+header h1 {
+	display: inline;
+    float: left;
+    
+    width: auto;
+	
+    font-size: 1.65em;
+}
+
+h1>a {
+    color: #6AC;
+    text-shadow: 1px 2px 3px #012;
+}
+
+a {
+	text-decoration: none;
+}
+
+#left-sidebar, #right-sidebar, #content {
+    margin-top: 2em;
+}
+
+#left-sidebar, #right-sidebar {
+    margin: 2.55em 0.25em 0 0.25em;
+}
+
+#left-sidebar a, #right-sidebar a {
+    display: table;
+    
+    overflow: hidden;
+    
+    cursor: pointer;
+	
+	height: auto;
+	width: 100%;
+    
+    margin-top: 8px;
+	margin-bottom: 10px;
+    
+    padding: 0.25em;
+	
+	color: #8AD;
+	background-color: #555;
+	
+	text-shadow: 0px 2px 2px #383838;
+	
+	font-size: 1.45em;
+    
+    border-left: #269 solid 8px;
+    
+    -webkit-box-shadow: 1px 1px 4px 2px #404040;
+       -moz-box-shadow: 1px 1px 4px 2px #404040;
+            box-shadow: 1px 1px 4px 2px #404040;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    display: table;
+    font-size: 1.75em;
+    padding: 0.25em;
+}
+
+#packages-list {
+	display: block;
+	clear: left;
+    width: 99%;
+}
+
+#packages-list .package {
+    overflow: hidden;
+    
+    cursor: pointer;
+    
+    margin-top: 8px;
+	margin-bottom: 10px;
+    
+    padding: 0.25em;
+	
+	color: #8AD;
+	background-color: #555;
+	
+	text-shadow: 0px 2px 2px #383838;
+	
+	font-size: 1.45em;
+    
+    border-left: #269 solid 8px;
+    
+    -webkit-box-shadow: 1px 1px 4px 2px #404040;
+       -moz-box-shadow: 1px 1px 4px 2px #404040;
+            box-shadow: 1px 1px 4px 2px #404040;
+}
+
+.package .main-info {
+    display: inline-block;
+    
+    float: left;
+    clear: both;
+    
+    width: 100%;
+}
+
+.package .main-info .package-name {
+	display: inline;
+	
+	text-overflow: ellipsis;
+}
+
+.package .main-info .package-version {
+    display: inline;
+	
+	font-size: 1em;
+	text-shadow: 0px 1px 2px #383838;
+	
+	margin-left: 6px;
+}
+
+.package .main-info .package-arch {
+    float: right;
+    
+    text-shadow: 0px 1px 2px #383838;
+    
+    magin-top: 8px;
+    padding-right: 6px;
+    
+    margin-right: 6px;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.package .secondary-info {
+	width: 100%;
+	float: left;
+	
+    clear: both;
+    
+    white-space: wrap;
+    
+    padding-top: 0.5em;
+}
+
+.package .secondary-info .description {
+    display: inline;
+    float: left;
+    clear: both;
+    
+    max-width: 100%;
+    
+    overflow: visible;
+    text-overflow: visible;
+    
+    margin-right: 6px;
+}
+
+.package .secondary-info .link {
+    display: inline;
+    float: left;
+    clear: both;
+    
+    padding-top: 0.5em;
+    
+    color: #4AC;
+}
+
+.package .secondary-info .pub-date {
+    display: inline-block;
+    float: right;
+    
+    padding-top: 0.5em;
+    
+    margin-right: 12px;
+}
+
+footer {
+	display: block;
+	float: left;
+	clear: left;
+	
+	width: 100%;
+}
+
+/* *************************************************** */
+
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+	body {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-device-width: 768px) {
+    body {
+        font-size: 0.825em;
+    }
+}
+
+@media all and (orientation: portrait) {
+	
+}
+
+@media all and (orientation: landscape) {
+	
+}
+

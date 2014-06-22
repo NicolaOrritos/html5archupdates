@@ -338,7 +338,7 @@ $(document).ready(function ()
 	});
     
     
-    $("nav #menu li>a").fastClick( function()
+    $("#menu li>a").fastClick( function()
 	{
     	$(this).toggleClass("selected");
     	
@@ -481,11 +481,6 @@ $(document).ready(function ()
     	loadFeed(feedURL);
     	
     	
-    	toggleMenu();
-    });
-    
-    $("nav #more-menu").fastClick(function(event)
-    {
     	toggleMenu();
     });
 

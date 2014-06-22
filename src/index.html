@@ -1,146 +1,131 @@
-<!doctype html>
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>Example</title>
 
-<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
-<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<!-- the "no-js" class is for Modernizr. -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-<head id="www-arch-packages-updates-com" data-template-set="html5-reset">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<meta charset="utf-8">
-	
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	
-	<title>Package Updates</title>
-	
-	<meta name="title" content="Packages Updates">
-	<meta name="description" content="Arch Linux Packages Updates">
-	<!-- Google will often use this as its description of your page/site. Make it good. -->
-	
-	<meta name="google-site-verification" content="">
-	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
-	
-	<meta name="author" content="Nicola Orritos">
-	<meta name="Copyright" content="Copyleft Nicola Orritos 2012. 'Date a Cesare ciò che è di Cesare'">
+        <title>Package Updates</title>
 
-	<!-- Dublin Core Metadata : http://dublincore.org/ -->
-	<meta name="DC.title" content="Arch Linux Packages Updates">
-	<meta name="DC.subject" content="Updated info on the latest packages released for Arch Linux">
-	<meta name="DC.creator" content="Nicola Orritos">
-	
-	<!--  Mobile Viewport Fix
-	j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-	device-width : Occupy full width of the screen in its current orientation
-	initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-	maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-	-->
-	<!-- Uncomment to use; use thoughtfully!
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-	-->
+        <meta name="title" content="Packages Updates">
+        <meta name="description" content="Arch Linux Packages Updates">
+        <!-- Google will often use this as its description of your page/site. Make it good. -->
+        
+        <meta name="author" content="Nicola Orritos">
+        <meta name="Copyright" content="Copyleft Nicola Orritos 2014. 'Date a Cesare ciò che è di Cesare'">
 
-	<link rel="shortcut icon" href="favicon.ico">
-	<!-- This is the traditional favicon.
-		 - size: 16x16 or 32x32
-		 - transparency is OK
-		 - see wikipedia for info on browser support: http://mky.be/favicon/ -->
-		 
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<!-- The is the icon for iOS's Web Clip.
-		 - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display (IMHO, just go ahead and use the biggest one)
-		 - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
-		 - Transparency is not recommended (iOS will put a black BG behind the icon) -->
-		 
-	
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'>
-	
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="animate.min.css" />
-	
-	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
-	<script src="modernizr-1.7.min.js"></script>
+        <!-- Dublin Core Metadata : http://dublincore.org/ -->
+        <meta name="DC.title" content="Arch Linux Packages Updates">
+        <meta name="DC.subject" content="Updated info on the latest packages released for Arch Linux">
+        <meta name="DC.creator" content="Nicola Orritos">
 
-</head>
+        <!--  Mobile Viewport Fix
+        j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
+        device-width : Occupy full width of the screen in its current orientation
+        initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
+        maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
+        -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+        <!-- This is the traditional favicon.
+             - size: 16x16 or 32x32
+             - transparency is OK
+             - see wikipedia for info on browser support: http://mky.be/favicon/ -->
 
-<body>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- The is the icon for iOS's Web Clip.
+             - size: 57x57 for older iPhones, 72x72 for iPads, 114x114 for iPhone4's retina display
+               (IMHO, just go ahead and use the biggest one)
+             - To prevent iOS from applying its styles to the icon name it thusly: apple-touch-icon-precomposed.png
+             - Transparency is not recommended (iOS will put a black BG behind the icon) -->
 
-<div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
-	<header>
-	    <hgroup>
-		    
-		    <h1><a href="">
-		      <!-- img src="aup-48x48.png" / -->
-		      Archlinux UPdates
-            </a></h1>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+        <link rel="stylesheet" href="http://www.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" />
+        <link rel="stylesheet" href="css/animate.min.css" />
+
+        <!--[if lte IE 8]><script src="html5shiv.js" type="text/javascript"></script><![endif]-->
+        <script src="jquery-1.9.1.js"></script>
+        <script src='google.fastbutton.js'></script>
+        <script src='jquery.google.fastbutton.js'></script>
+        
+        <script src="config.js"></script>
+        <script src="skel.min.js"></script>
+        <script src="skel-panels.min.js"></script>
+        
+        <script src="functions.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <div id="header">
+                <!-- h1 id="title">Archlinux UPdates</h1 -->
+            </div>
             
-		    <nav>
-		        <div id="more-menu">
-		            <div id="button"></div>
-		            <ol id="menu" class="hidden dropdown">
-			            <li><a id="all" class="repo-choice selected" href="#">All</a></li>
-			            <div class="menu-section">Standard Repositories</div>
-			            <li><a id="core" class="repo-choice not-selected" href="#">Core</a></li>
-			            <li><a id="extra" class="repo-choice not-selected" href="#">Extra</a></li>
-			            <li><a id="community" class="repo-choice not-selected" href="#">Community</a></li>
-                        <li><a id="multilib" class="repo-choice not-selected" href="#">Multilib</a></li>
-                        <div class="menu-section">Architectures</div>
-			            <li><a id="i686" class="arch-choice not-selected" href="#i">i686</a></li>
-			            <li><a id="x86_64" class="arch-choice not-selected" href="#">x86_64</a></li>
-			            <li><a id="any" class="arch-choice not-selected" href="#">Any</a></li>
-			            <div class="menu-section">Extra News</div>
-			            <li><a id="aur" class="arch-choice not-selected" href="#">AUR</a></li>
-                        <li><a id="news" class="arch-choice not-selected" href="#">News</a></li>
-		            </ol>
-			    </div>
-		    </nav>
-	    </hgroup>
-	</header>
-	
-	<ul id="packages-list">
-	</ul>
-	
-	<footer>
-		<p>
-		  with tech by&nbsp;
-		  <a href="http://html5reset.org">html5reset</a> ::
-          <a href="http://daneden.me/animate">animate.css</a> ::
-          <a href="http://jquery.com">jQuery</a> ::
-          <a href="http://incubator.apache.org/callback">Apache Cordova</a> ::
-          <a href="http://www.google.com/webfonts/specimen/Open+Sans+Condensed">Open Sans Condensed</a> ::
-          <a href="http://labs.ft.com">FT Labs</a>
-		</p>
-	</footer>
-
-</div>
-
-<!-- here comes the javascript -->
-<script src='jquery-1.9.1.js'></script>
-<script src='google.fastbutton.js'></script>
-<script src='jquery.google.fastbutton.js'></script>
-
-<!-- this is where we put our custom functions -->
-<script src="functions.js"></script>
-
-<!-- Asynchronous google analytics; this is the official snippet.
-	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
-	 
-<script>
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
--->
-  
-</body>
+            <!-- Main -->
+            <div class="row">
+                <!-- Left Sidebar -->
+                <section id="left-sidebar" class="2u">
+                    <section>
+                        <!-- h2>Respositories</h2 -->
+                        <ol id="menu">
+                            <li><a id="all" class="repo-choice selected" href="#">All</a></li>
+                            <li><a id="core" class="repo-choice not-selected" href="#">Core</a></li>
+                            <li><a id="extra" class="repo-choice not-selected" href="#">Extra</a></li>
+                            <li><a id="community" class="repo-choice not-selected" href="#">Community</a></li>
+                            <li><a id="multilib" class="repo-choice not-selected" href="#">Multilib</a></li>
+                            <li><a id="i686" class="arch-choice not-selected" href="#i">i686</a></li>
+                            <li><a id="x86_64" class="arch-choice not-selected" href="#">x86_64</a></li>
+                            <li><a id="any" class="arch-choice not-selected" href="#">Any</a></li>
+                            <li><a id="aur" class="arch-choice not-selected" href="#">AUR</a></li>
+                            <li><a id="news" class="arch-choice not-selected" href="#">News</a></li>
+                        </ol>
+                    </section>
+                </section>
+                
+                <!-- Content -->
+                <section id="content" class="8u">
+                    <ul id="packages-list">
+	               </ul>
+                </section>
+                
+                <!-- Right Sidebar -->
+                <section id="right-sidebar" class="2u">
+                    <section>
+                        <a href="http://skeljs.org">skelJS</a>
+                        <a href="http://html5reset.org">html5reset</a>
+                        <a href="http://daneden.me/animate">animate.css</a>
+                        <a href="http://jquery.com">jQuery</a>
+                        <a href="http://incubator.apache.org/callback">Apache Cordova</a>
+                        <a href="http://www.google.com/webfonts/specimen/Open+Sans+Condensed">Open Sans</a>
+                        <a href="http://labs.ft.com">FT Labs</a>
+                    </section>
+                </section>
+            </div>
+            
+            <!-- Footer -->
+            <div id="footer">
+            </div>
+        </div>
+        
+        <!-- Bottom Panel -->
+        <!-- div id="bottomPanel">
+            <form>
+                <div class="row half">
+                    <div class="6u"><input type="text" placeholder="Name" /></div>
+                    <div class="6u"><input type="text" placeholder="Email" /></div>
+                </div>
+                <div class="row half">
+                    <div class="12u"><textarea placeholder="Message"></textarea></div>
+                </div>
+                <div class="row half">
+                    <div class="12u"><input type="button" class="button" value="Send Message" /></div>
+                </div>
+            </form>
+        </div -->
+    </body>
 </html>
